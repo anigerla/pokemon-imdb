@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon IMDB</title>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav_bar">
+            <div>
+                <a href="https://pokemon.fandom.com/wiki/Pok%C3%A9mon_Wiki">
+                   <h1>logo</h1>
+                </a>
+            </div>
+            <div class="nav_bar_child">
+                <i class="fas fa-search" input type="search" onclick="myFunction()"></i>
+                <i class="fas fa-comment-alt"  onclick="myFunction()"></i>
+                <i class="fas fa-suitcase"  onclick="myFunction()"></i>
+                <div class="profile_icon"  onclick="myFunction()">
+                    <i class="fas fa-user"></i>
+                    <span class="profile_span">profile</span>
+                </div>
+            </div>
+        </div>
+        <div class="settings">
+            <i class="fas fa-cog" onclick="myFunction()"></i>
+            <i class="fas fa-share" onclick="myFunction()"></i>
+        </div>
+    </header>
+    <main>
+        <div class="user">
+            <div class="top_bar">
+                <div>
+                    <i class="fas fa-user-circle top_bar_icon"></i>
+                    <span class="card_title">personal</span>
+                </div>
+                <div>
+                    <i class="fas fa-pen" onclick="myFunction()"></i>
+                </div>
+            </div> <!--top_bar ends-->
+            <div class="user_profile">
+                <div class="name_n_login">
+                    <div class="user_name">
+                        <span id="name_of_user">
+                        <!--JS picking up name based on id-->
+                        </span>
+                    </div>
+                    <div class="login">
+                        <span>last login:</span>
+                        <span id="time_ago"></span>
+                        <!-- JS linking to date ago -->
+                        <span>ago</span>
+                    </div>
+                </div> <!--name_n_login ends-->
+                <div class="avatar">
+                    <img id="user_img" src="" alt="Drawing of Pikachu">
+                    <!-- JS picking up image based on id -->
+                </div>
+                <div class="social_media">
+                    <a id="facebook" href="" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a id="twitter" href="" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a id="linkedIn" href="" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a id="instagram" href="" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="profile_info">
+                    <span>about me</span>
+                    <p id="about">
+                        <!-- empty p element that is populated by Javascript according to each user's input -->
+                    </p>
+                </div>
+            </div> <!-- user_profile ends -->
+        </div><!-- user ends -->
+        <div class="user_experience">
+            <div class="top_bar">
+                <div>
+                    <i class="fas fa-calendar-week top_bar_icon"></i>
+                    <span class="card_title">general</span>
+                </div>
+                <div>
+                    <i class="fas fa-pen" onclick="myFunction()"></i>
+                    <!-- links to editing the user experience and availability-->
+                </div>
+            </div>
+            <div class="user_experience_child">
+                <div class="work_experience">
+                    <div class="category">
+                        <i class="fas fa-suitcase background_icon">
+                            <span class="category_child">filmography</span>
+                        </i>
+                    </div>
+                    <div id="exp_details">
+                        <!-- empty div that will be populated with new elements and data through Javascript -->
+                    </div>
+                </div>
+                <div class="user_availab_container">
+                    <div class="category">
+                        <i class="far fa-clock background_icon">
+                            <span class="category_child">availability</span>
+                        </i>
+                    </div>
+                    <div id="times_availab">
+                        <!-- empty div that will be populated with Javascript -->
+                    </div>
+                </div>
+                <div class="job_pref_container">
+                    <div class="category">
+                        <i class="fas fa-sliders-h background_icon">
+                            <div class="category_child">
+                                <span>equipment</span>
+                            </div>
+                        </i>
+                    </div>
+                    <div id="job_pref"></div>
+                    <!-- JS running through loop populating job prefs with styling applied to div -->
+                </div>
+                <div class="language_container">
+                    <div class="category">
+                        <i class="fas fa-globe background_icon">
+                            <div class="category_parent">
+                                <span class="category_child">languages</span>
+                            </div>
+                        </i>
+                    </div>
+                    <div id="languages"></div>
+                    <!-- JS populates the abilities fields input by the user -->
+                </div>
+                <div class="skills_cert_container">
+                    <div class="category">
+                        <i class="fas fa-scroll background_icon">
+                            <div class="category_child category_special">
+                                <span>skills</span>
+                                <span>abilities</span>
+                            </div>
+                        </i> 
+                    </div>
+                    <div id="skills_cert"></div>
+                    <!-- JS picking up input from user -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- JavaScript Scripts start -->
+    <script src="./JS/javascript.js"></script>
+</body>
+</html>

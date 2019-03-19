@@ -1,0 +1,538 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: rgba(218, 218, 24, 0.856);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main, .top_bar, .nav_bar, .settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main {
+  height: 88vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav_bar, .settings {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav_bar {
+  background-image: -webkit-gradient(linear, left top, right top, from(#d85904), to(rgba(226, 226, 23, 0.856)));
+  background-image: linear-gradient(to right, #d85904, rgba(226, 226, 23, 0.856));
+  margin-left: 0;
+}
+
+.nav_bar h1 {
+  margin: 0.2rem 0.5rem;
+  margin-top: 0;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+  padding: 1rem;
+  -webkit-transition: 0.3s color ease-in;
+  transition: 0.3s color ease-in;
+}
+
+.nav_bar .nav_bar_child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-left: 11rem;
+}
+
+.nav_bar .nav_bar_child i {
+  padding: 1rem;
+  color: white;
+  -webkit-transition: 0.3s color ease-in;
+  transition: 0.3s color ease-in;
+}
+
+.nav_bar .nav_bar_child .profile_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav_bar .nav_bar_child .profile_icon i {
+  font-size: 2rem;
+  padding: 0 0 0.1rem 0.5rem;
+  -webkit-transition: 0.3s color ease-in;
+  transition: 0.3s color ease-in;
+}
+
+.nav_bar .nav_bar_child .profile_icon span {
+  color: white;
+}
+
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 2rem;
+}
+
+.settings i {
+  color: white;
+  padding-left: 1.5rem;
+  -webkit-transition: 0.3s color ease-in;
+  transition: 0.3s color ease-in;
+}
+
+h1:hover, .nav_bar_child i:hover, .profile_span:hover, .settings i:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+header div, .user {
+  margin: 0 1rem;
+}
+
+.user, .user_experience {
+  -webkit-box-shadow: 0.5px 1.5px 0.5px #aaaaaa;
+          box-shadow: 0.5px 1.5px 0.5px #aaaaaa;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.user {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem 0.5rem 0 1rem;
+}
+
+.top_bar {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(218, 218, 24, 0.856);
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.top_bar div {
+  padding: 1rem;
+}
+
+.top_bar div .top_bar_icon {
+  color: #d85904;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.top_bar div .card_title {
+  color: #d85904;
+  font-weight: bold;
+}
+
+.top_bar div .fa-pen {
+  -webkit-transition: 0.3s color ease-in;
+  transition: 0.3s color ease-in;
+}
+
+.top_bar div .fa-pen:hover {
+  cursor: pointer;
+  color: #d3d3d3;
+}
+
+.user_profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1.5rem;
+}
+
+.user_profile .name_n_login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.user_profile .name_n_login #name_of_user {
+  font-size: 20px;
+}
+
+.user_profile .name_n_login .login {
+  color: gray;
+}
+
+.user_profile .avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+}
+
+.user_profile .avatar #user_img {
+  width: 15rem;
+  height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.user_profile .social_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem 3rem;
+}
+
+.user_profile .social_media a {
+  background-color: grey;
+  border-radius: 50%;
+  color: white;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+  margin: 0 0.5rem;
+}
+
+.user_profile .social_media a i {
+  font-size: 1.5rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.user_profile .social_media .fa-facebook-f {
+  padding: 0.5rem 0.8rem;
+}
+
+.user_profile .social_media a:hover {
+  background-color: #d85904;
+}
+
+.user_profile .profile_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.user_profile .profile_info span {
+  font-size: 14px;
+  color: gray;
+}
+
+.user_profile .profile_info p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 0.7rem;
+  width: 60%;
+  line-height: 1.5rem;
+  font-size: 16px;
+}
+
+.user_experience {
+  width: 70%;
+  margin: 0.5rem 1rem 0 0;
+}
+
+.user_experience .user_experience_child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 14px;
+  height: 90%;
+}
+
+.user_experience .user_experience_child .category {
+  width: 7rem;
+  margin-left: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.user_experience .user_experience_child .background_icon {
+  color: #F5F5F5;
+  font-size: 4rem;
+  position: relative;
+}
+
+.user_experience .user_experience_child .background_icon .category_child {
+  position: absolute;
+  top: 1.5rem;
+  left: -0.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+  font-weight: normal;
+  text-align: center;
+  background-color: white;
+}
+
+.user_experience .user_experience_child .background_icon .category_child span {
+  text-align: center;
+}
+
+.user_experience .user_experience_child .background_icon .category_special {
+  top: 1rem;
+}
+
+.user_experience .user_experience_child .work_experience, .user_experience .user_experience_child .user_availab_container, .user_experience .user_experience_child .job_pref_container, .user_experience .user_experience_child .language_container, .user_experience .user_experience_child .skills_cert_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_experience .user_experience_child .work_experience #exp_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5rem;
+  padding-left: 1rem;
+}
+
+.user_experience .user_experience_child .work_experience #exp_details span {
+  padding: 0.4rem;
+}
+
+.user_experience .user_experience_child .work_experience #exp_details .job_parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 1rem;
+}
+
+.user_experience .user_experience_child .work_experience #exp_details .job_parent .job_dates {
+  color: gray;
+  text-transform: uppercase;
+}
+
+.user_experience .user_experience_child .work_experience #exp_details .job_parent .employer {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.user_experience .user_experience_child .work_experience #exp_details .job_parent .job_title {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.user_experience .user_experience_child .work_experience #exp_details .time_worked {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_experience .user_experience_child .work_experience #exp_details .time_worked .time_worked_total {
+  font-size: 16px;
+  color: #d85904;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 1rem;
+  font-weight: bold;
+}
+
+.user_experience .user_experience_child .user_availab_container #times_availab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.user_experience .user_experience_child .user_availab_container #times_availab .ok_times_child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  margin: 1rem;
+}
+
+.user_experience .user_experience_child .user_availab_container #times_availab .ok_times_child .day {
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+.user_experience .user_experience_child .user_availab_container #times_availab .ok_times_child .am_time, .user_experience .user_experience_child .user_availab_container #times_availab .ok_times_child .pm_time {
+  border-radius: 15px;
+  background-color: #d85904;
+  color: white;
+  text-align: center;
+  padding: 0.3rem 0.9rem;
+  margin: 0.2rem;
+}
+
+.user_experience .user_experience_child .user_availab_container #times_availab .ok_times_child .off_day, .user_experience .user_experience_child .user_availab_container #times_availab .ok_times_child .all_day_availab {
+  border-radius: 50%;
+  background-color: #d3d3d3;
+  padding: 1.5rem 1.3rem;
+  text-transform: uppercase;
+}
+
+.user_experience .user_experience_child .user_availab_container #times_availab .ok_times_child .all_day_availab {
+  background-color: #d85904;
+  padding: 1.5rem 0.4rem;
+  color: white;
+}
+
+.user_experience .user_experience_child .job_pref_container #job_pref {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.user_experience .user_experience_child .job_pref_container #job_pref .job_pref_child {
+  background-color: #d3d3d3;
+  border-radius: 20px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+}
+
+.user_experience .user_experience_child #languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user_experience .user_experience_child #languages .languages_child {
+  padding: 1rem;
+}
+
+.user_experience .user_experience_child #skills_cert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user_experience .user_experience_child #skills_cert .skills_cert_child {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1392px) {
+  main {
+    height: 100%;
+  }
+  main .user_experience_child {
+    height: 100%;
+  }
+  main .user_experience_child #times_availab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 2rem;
+  }
+  main .user_experience_child > div {
+    margin-top: 2rem;
+  }
+  main #exp_details {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 982px) {
+  #job_pref, #languages, #skills_cert {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

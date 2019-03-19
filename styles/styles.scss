@@ -1,0 +1,443 @@
+//Variables start
+$topBarBackground: rgba(218, 218, 24, 0.856);
+$inputBackground: #d3d3d3;
+$activeInputBgrnd: rgb(216, 89, 4);
+
+//Mixins start
+@mixin flex_row {
+    display: flex;
+}
+
+@mixin flex_col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin nav_bar_transition {
+    transition: 0.3s color ease-in;
+}
+//Mixins end
+
+//GENERAL STYLING STARTS
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: $topBarBackground;
+    @include flex_row;
+    justify-content: space-between; 
+}
+
+main, .top_bar, .nav_bar, .settings {
+    @include flex_row;
+}
+
+main {
+    height: 88vh;
+}
+
+a {
+    text-decoration: none;
+}
+//General Styling ends
+
+//Header Styling starts
+.nav_bar, .settings {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_bar {
+    background-image: linear-gradient(to right, rgb(216, 89, 4), rgba(226, 226, 23, 0.856));
+    margin-left: 0;
+
+    & h1 {
+        margin: 0.2rem 0.5rem;
+        margin-top: 0;
+        color: white;
+        font-family: 'Comfortaa', cursive;
+        padding: 1rem;
+        @include nav_bar_transition;
+    }
+
+    & .nav_bar_child {
+    @include flex_row;
+    align-content: center;
+    margin-left: 11rem;
+
+        & i {
+            padding: 1rem;
+            color: white;
+            @include nav_bar_transition;
+        }
+
+        & .profile_icon {
+            @include flex_col;
+            justify-content: center;
+
+            & i {
+                font-size: 2rem;
+                padding: 0 0 0.1rem 0.5rem;
+                @include nav_bar_transition;
+            }
+
+            & span {
+                color: white;
+            }
+        }
+    }   
+}
+
+.settings {
+    @include flex_row;
+    justify-content: space-between;
+    margin-right: 2rem;
+
+    i {
+        color: white;
+        padding-left: 1.5rem;
+        @include nav_bar_transition;
+    }       
+}
+
+h1:hover, .nav_bar_child i:hover, .profile_span:hover, .settings i:hover {
+    color: gray;
+    cursor: pointer;
+}
+//Header Styling ends
+
+//Main Styling starts
+header div, .user {
+    margin: 0 1rem;
+}
+
+.user, .user_experience {
+    box-shadow: 0.5px 1.5px 0.5px #aaaaaa;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.user {
+    width: 40%;
+    @include flex_col;
+    align-items: center;
+    margin: 0.5rem 0.5rem 0 1rem;
+}
+
+.top_bar {
+    justify-content: space-between;
+    background-color: $topBarBackground;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    & div {
+        padding: 1rem;
+        
+        & .top_bar_icon {
+            color: $activeInputBgrnd;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        & .card_title {
+            color: $activeInputBgrnd;
+            font-weight: bold;
+        }
+
+        & .fa-pen {
+            @include nav_bar_transition;
+        }
+
+        & .fa-pen:hover {
+            cursor: pointer;
+            color: $inputBackground;
+        }
+    }
+}
+
+.user_profile {
+    @include flex_col;
+    justify-content: center;
+    margin: 1.5rem;
+
+    & .name_n_login {
+        @include flex_row;
+        justify-content: space-between;
+
+        & #name_of_user {
+            font-size: 20px;
+        }
+
+        & .login {
+            color: gray;
+        }
+    }
+
+    & .avatar {
+        @include flex_row;
+        justify-content: center;
+        margin-top: 1rem;
+
+        & #user_img {
+        width: 15rem;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: 50%;
+        }
+    }
+
+    & .social_media {
+    @include flex_row;
+    justify-content: center;
+    margin: 1rem 3rem;
+
+        a {
+        background-color: grey;
+        border-radius: 50%;
+        color: white;
+        transition: background-color 0.3s ease-in;
+        margin: 0 0.5rem;
+        
+        i {
+            font-size: 1.5rem;
+            padding: 0.4rem 0.6rem;
+          }    
+        }
+
+        .fa-facebook-f {
+            padding: 0.5rem 0.8rem;
+        }
+
+        a:hover {
+            background-color: $activeInputBgrnd;
+        }
+    }
+
+    & .profile_info {
+        @include flex_row;  
+        align-items: baseline;
+        justify-content: center;
+
+        span {
+            font-size: 14px;
+            color: gray;
+        }
+
+        p {
+            @include flex_col;
+            margin-left: 0.7rem;
+            width: 60%;
+            line-height: 1.5rem;
+            font-size: 16px;
+        }
+    }
+}
+
+.user_experience {
+    width: 70%;
+    margin: 0.5rem 1rem 0 0;
+
+    & .user_experience_child {
+        @include flex_col;
+        justify-content: space-around;
+        font-size: 14px;
+        height: 90%;
+
+        & .category {
+            width: 7rem;
+            margin-left: 1rem;
+            align-self: center;
+        }
+
+        & .background_icon {
+            color: #F5F5F5;
+            font-size: 4rem;
+            position: relative;
+
+            & .category_child {
+                position: absolute;
+                top: 1.5rem;
+                left: -0.2rem;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                color: black;
+                font-weight: normal; 
+                text-align: center;
+                background-color: white;
+
+                & span {
+                    text-align: center;
+                }
+            }
+
+            & .category_special {
+                top: 1rem;
+            }
+        }    
+
+        & .work_experience, .user_availab_container, .job_pref_container, .language_container, .skills_cert_container {
+            @include flex_row;
+            align-items: center;
+        }
+
+        & .work_experience {
+
+            & #exp_details {
+                @include flex_row;
+                flex-wrap: wrap;
+                padding: 0.5rem;
+                padding-left: 1rem;
+
+                & span {
+                    padding: 0.4rem;
+                }
+
+                & .job_parent {
+                    @include flex_col;
+                    margin-left: 1rem;
+
+                    & .job_dates {
+                        color: gray;
+                        text-transform: uppercase;
+                    }
+
+                    & .employer {
+                        font-weight: bold;
+                        font-size: 20px;
+                    }
+
+                    & .job_title {
+                        text-transform: uppercase;
+                        font-size: 18px;
+                    }
+                }
+
+                & .time_worked {
+                    @include flex_row;
+                    align-items: center;
+
+                    & .time_worked_total {
+                        font-size: 16px;
+                        color: $activeInputBgrnd;
+                        align-self: center;
+                        padding-left: 1rem;
+                        font-weight: bold;
+                    }
+                }    
+            }
+        }
+
+        & .user_availab_container {
+            & #times_availab {
+                @include flex_row;
+                justify-content: space-between;
+            
+                & .ok_times_child {
+                    @include flex_col;
+                    justify-content: baseline;
+                    margin: 1rem;
+
+                    & .day {
+                        text-align: center;
+                        margin-bottom: 0.3rem;
+                    }
+                
+                    & .am_time, .pm_time {
+                        border-radius: 15px;
+                        background-color: $activeInputBgrnd;
+                        color: white;
+                        text-align: center;
+                        padding: 0.3rem 0.9rem;
+                        margin: 0.2rem;
+                    }
+
+                    & .off_day, .all_day_availab {
+                        border-radius: 50%;
+                        background-color: $inputBackground;
+                        padding: 1.5rem 1.3rem;
+                        text-transform: uppercase;
+                    }
+
+                    & .all_day_availab {
+                        background-color: $activeInputBgrnd;
+                        padding: 1.5rem 0.4rem;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        & .job_pref_container {
+        
+            & #job_pref {
+                @include flex_row;
+                justify-content: space-evenly;
+
+                & .job_pref_child {
+                    background-color: $inputBackground;
+                    border-radius: 20px;
+                    text-align: center;
+                    padding: 0.5rem 1rem;
+                    margin: 0 0.5rem;
+                }
+            }
+        }
+
+        & #languages {
+            @include flex_row;
+            
+            & .languages_child {
+                padding: 1rem;
+            }
+        }
+
+        & #skills_cert {
+            @include flex_row;
+
+            & .skills_cert_child {
+                padding: 1rem;
+            }
+        }
+    }
+}
+//Main Styling ends
+
+//Responsive design styling starts
+//**Notes: only a couple of breakpoints have been added for the website version since there is another app designed for mobile devices that takes care of smaller screen sizes
+@media screen and (max-width: 1392px) {
+
+    main {
+        height: 100%;
+
+        .user_experience_child {
+            height: 100%;
+        
+            #times_availab {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding-left: 2rem;
+            }  
+        }
+
+        .user_experience_child>div {
+            margin-top: 2rem;
+        }
+
+        #exp_details {
+            margin-left: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 982px) {
+    #job_pref, #languages, #skills_cert {
+        @include flex_col;
+        flex-wrap: wrap;
+    }
+}
+//Responsive design styling ends
